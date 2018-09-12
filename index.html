@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp">
+<head>
+	<meta charset="utf-8">
+	<title>Estudio Angular</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+	
+</head>
+<body ng-controller="FirstController">
+	<h1>{{nombre}}</h1>
+	<p><strong>Valor del padre:</strong>{{$parent.nombre}}</p>
+	<div ng-cotroller="ChildController">
+		<p><strong>Valor del padre:</strong>{{$parent.nombre}}</p>
+		<p><strong>Valor del hijo:</strong>{{nombre}}</p>
+		<input type="text" name="" ng-model="$parent.nombre">
+	</div>
+</body>
+</html>
